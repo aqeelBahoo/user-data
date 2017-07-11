@@ -1,0 +1,23 @@
+<div>
+    <table class="table table-success">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>Date</th>
+            <th></th>
+        </tr>
+        <tr ng-repeat="user in userData track by $index">
+            <td ng-bind="user.firstName"></td>
+            <td ng-bind="user.lastName"></td>
+            <td ng-bind="user.email"></td>
+            <td ng-bind="user.phone"></td>
+            <td ng-bind="user.address"></td>
+            <td ng-bind="user.d"></td>
+            <td ng-click="remove($index)" class="btn btn-primary">X</td>
+            <td ng-click="edit($index)" class="btn btn-primary">!</td>
+        </tr>
+    </table>
+</div>

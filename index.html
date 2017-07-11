@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="bootstrap/js/jquery.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+
+    <style>
+        .container{
+            margin-top: 30px;
+        }
+        .header{
+            width: 100%;
+        }
+        .header-menu{
+            margin: 0px;
+            padding: 0px;
+            overflow: hidden;
+            list-style: none;
+            background-color: #4b5257;
+        }
+        .header-menu li{
+            float: left;
+        }
+        .header-menu li a{
+            color: white;
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        .header-menu li:hover:not(.firstChild){
+            background-color: #1d1e1f;
+        }
+        .header-menu li:first-child{
+            background-color: #2aabd2;
+            padding: 0px 20px;
+        }
+    </style>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl" style="background-color: rgba(81, 187, 152, 0.15)">
+<div class="header">
+    <ul class="header-menu">
+        <li class="firstChild"><a href="#users">Users</a></li>
+        <li><a href="#addUser">Add User</a></li>
+        <li><a href="#deleteUser">Delete User</a></li>
+        <li><a href="#editUser">Edit User</a></li>
+    </ul>
+</div>
+
+<div class="container" ng-view></div>
+
+
+<script src="angular.js"></script>
+<script src="angular-route.js"></script>
+<script src="app.js"></script>
+<script src="indexCtrl.js"></script>
+<script src="userDetailsTableCtrl.js"></script>
+<script src="addUserCtrl.js"></script>
+</body>
+</html>
